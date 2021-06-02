@@ -6,6 +6,16 @@ For this it can be used from browsers, desktop clients or even smaller embedded 
 
 [Full Documentation](https://objectlink.netlify.app/)
 
+## Features
+
+* Link/Unlink of remote objects
+* Sync properties between remote object and linked local objects
+* Asynchronous remote method invocation
+* Server side signals to all linked objects
+* Fully support for [ApiGear](http://apigear.io) object model and code generation tooling
+
+The protocol itself is isolated from any transport technology to make it easier to port.
+
 
 ## Message Types
 
