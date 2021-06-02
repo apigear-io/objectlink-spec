@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: ObjectLinkProtocol.png
-tagline: Link Remote Objects over WebSockets or HTTP
+tagline: Link Objects over WebSockets
 actionText: Quick Start →
 actionLink: /guide/
 features:
@@ -18,5 +18,5 @@ features:
 - title: Different Languages
   details: Available in C++14, Typescript and Python. More to come...
 
-footer: Made by ApiGear with ❤️
+footer: Made by [ApiGear](https://apigear.io) with ❤️
 ---

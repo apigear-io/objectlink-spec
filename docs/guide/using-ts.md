@@ -5,45 +5,7 @@ The typescript object link library comes as a client and remote node. On the cli
 
 ## Client Node
 
-
-### Websocket client using the Client Node
-
-For the client we need a websocket connection to a server to send object link messages. The client needs to send incoming message to the remote node and listen to write request from the client node. There will be one node per websocket connection.
-
-```ts
-import WebSocket from 'ws'
-
-ready = false
-queue = []
-
-function process() {
-	if(!ready) {
-		return
-	}
-	// empty queue
-	while(queue.length > 0) {
-		const msg = this.queue.shift()
-		ws.send(msg)
-	}
-}
-
-const node = ClientNode()
-node.onWrite((msg) => {
-	// node might send message 
-	// while we are not connected yet
-	queue.push(msg)
-	process()
-}
-
-const ws = new WebSocket(address)
-ws.on('open', (ws) => {
-	ready = true
-	process()
-})
-ws.on('message', (data) => {
-	node.handleMessage(data.toString())
-}
-```
+The client side consist of object sinks which define the named object behavior and client nodes per socket which links these objects to remote nodes.
 
 
 ### Client Object as Object Sink
@@ -54,9 +16,9 @@ The object sink is the client side object and act as the counter part of the rem
 
 class Counter implements IObjectSink {
 	_count:0
-	client: ClientNode | null    
+	node: ClientNode | null    
 	constructor() {
-		this.client = ClientNode.addObjectSink(this)
+		this.node = ClientNode.addObjectSink(this)
 	}
     get count(): number {
         return this._count
@@ -69,7 +31,7 @@ class Counter implements IObjectSink {
 
    	increment() {
    		// remote method invokation, without args or callback
-		this.client?.invokeRemote('demo.Counter/increment')
+		this.node?.invokeRemote('demo.Counter/increment')
 	}
 
 	olinkObjectName(): string {
@@ -93,6 +55,50 @@ class Counter implements IObjectSink {
     }    
 }
 
+```
+
+
+### Websocket client using the Client Node
+
+For the client we need a websocket connection to a server to send object link messages. The client needs to send incoming message to the remote node and listen to write request from the client node. There will be one node per websocket connection.
+
+```ts
+import WebSocket from 'ws'
+import ClientNode from 'olink'
+
+ready = false
+queue = []
+
+function processMessages() {
+	if(!ready) {
+		return
+	}
+	// empty queue
+	while(queue.length > 0) {
+		const msg = this.queue.shift()
+		ws.send(msg)
+	}
+}
+
+const node = ClientNode()
+node.onWrite((msg) => {
+	// node might send message 
+	// while we are not connected yet
+	queue.push(msg)
+	processMessages()
+}
+
+// create websocket
+const ws = new WebSocket(address)
+ws.on('open', (ws) => {
+	ready = true
+	//
+	processMessages()
+})
+ws.on('message', (data) => {
+	// let our node handle all messages
+	node.handleMessage(data.toString())
+}
 ```
 
 
