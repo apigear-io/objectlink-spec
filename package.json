@@ -1,0 +1,19 @@
+{
+  "name": "objectlink-docs",
+  "version": "0.0.1",
+  "description": "ObjectLink Core Docs",
+  "main": "index.js",
+  "authors": {
+    "name": "JRyannel",
+    "email": "jryannel@apigear.io"
+  },
+  "repository": "https://github.com/apigear-io/objectlink-docs/objectlink-docs",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}

@@ -1,2 +1,3 @@
 # objectlink-docs
-documentation regarding the objectlink protocol
+
+documentation concerning the objectlink core protocol
