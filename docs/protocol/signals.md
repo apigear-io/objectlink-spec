@@ -54,3 +54,13 @@ To stop receiving signals, just unlink the remote object.
 ```js
 --> [ UNLINK, "org.demos.Echo"]
 ```
+
+
+## Sequence Diagram
+
+After an object is linked server side signals will be send.
+
+```mermaid
+sequenceDiagram
+Source->Sink: [SIGNAL:int, SignalId:string, Args:jsonArray]
+```

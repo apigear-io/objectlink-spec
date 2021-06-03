@@ -1,23 +1,33 @@
-# Using Typescript
+# Using ObjectLink
 
-The typescript object link library comes as a client and remote node. On the client side after a socket connection is established the incoming messages must be handled by the client node and the node emit write requests, which must be forwarded to the socket.
+This shows the usage of the different object link impementations using conceptual code snippets. For the exact usage, please consult the documentation of different implementation repositories.
+
+An object link implementation comes with a `ClientNode` and a `RemoteNode` class. A client node manages the client objects, called sinks and the remote node the server objects called sources. 
+
+Internally these nodes use a global registry where all sinks (or sources) will be registered with their object name. This means the same object name can not be registered twice in the same program.
 
 
-## Client Node
+## Example Client Side
 
-The client side consist of object sinks which define the named object behavior and client nodes per socket which links these objects to remote nodes.
+The client side consist of object sinks which define the interface to the remote objects and client nodes for each connection to the remote object server.
 
 
-### Client Object as Object Sink
+### Object Sink
 
-The object sink is the client side object and act as the counter part of the remote side object source.
+The object sink is the client side interface for the object and act as the counter part of the remote side object source.
+
+*Note: In the future there will be generic base classes to minimize the client code.*
+
+Here is a typescript example.
 
 ```ts
 
 class Counter implements IObjectSink {
+	// our properties
 	_count:0
 	node: ClientNode | null    
 	constructor() {
+		// register this sink
 		this.node = ClientNode.addObjectSink(this)
 	}
     get count(): number {
@@ -38,11 +48,12 @@ class Counter implements IObjectSink {
         return 'demo.Counter'
     }
     olinkOnSignal(name: string, value: any): void {
+    	// handle server side signals
         const path = Name.pathFromName(name)
         console.log('Counter.onSignal', path, value)
     }
     olinkOnPropertyChanged(name: string, value: any): void {
-    	// update local property
+    	// handle server side property changes
         const path = Name.pathFromName(name)
         this[`_${path}`] = value
     }
@@ -102,7 +113,7 @@ ws.on('message', (data) => {
 ```
 
 
-## Remote Node Server
+## Example Server Side
 
 The remote server contains the object sources for the object communication using the websocket protocol.
 

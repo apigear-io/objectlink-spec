@@ -53,9 +53,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-ts',
-            'using-py',
-            'using-cpp',
+            'using-olink',
           ]
         }
       ],
@@ -81,5 +79,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    'vuepress-plugin-mermaidjs',
   ]
 }

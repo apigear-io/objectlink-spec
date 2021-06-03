@@ -49,3 +49,14 @@ The remote object executes the method and returns the reply or an error message 
 ```js
 <-- [ INVOKE_REPLY, 1, "echo"]
 ```
+
+
+## Sequence Diagram
+
+After an object is linked remote methods can be called.
+
+```mermaid
+sequenceDiagram
+Sink->Source: [INVOKE:int, RequestId:int, MethodId:string, Args:jsonArray]
+Source->Sink: [INVOKE_REPLY:int, RequestId:int, MethodId:string, Value:Json]
+```

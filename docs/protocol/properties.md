@@ -59,3 +59,14 @@ The remote object will then set the property and notify all linked objects about
 ```js
 <-- [ PROPERTY_CHANGE, "org.demos.Echo/message", "foo"]
 ```
+
+
+## Sequence Diagram
+
+After an object is linked propertie will be synced across all linked clients.
+
+```mermaid
+sequenceDiagram
+Sink->Source: [SET_PROPERTY:int, PropertyId:string, Value:json]
+Source->Sink: [PROPERTY_CHANGED:int, PropertyId:string, Value:json]
+```
