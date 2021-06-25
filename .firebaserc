@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "default": "apigear"
+  },
+  "targets": {
+    "apigear": {
+      "hosting": {
+        "studio-site": [
+          "apigear-studio-site"
+        ],
+        "objectapi-site": [
+          "apigear-objectapi-site"
+        ],
+        "objectlink-site": [
+          "apigear-objectlink-site"
+        ]
+      }
+    }
+  }
+}
