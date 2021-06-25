@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "objectlink-site",
     "public": "docs/.vuepress/dist",
     "ignore": [
       "firebase.json",
