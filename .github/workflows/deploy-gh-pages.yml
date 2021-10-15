@@ -1,0 +1,29 @@
+name: Deploy to Github pages
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - run: yarn
+      - run: yarn docs:build
+
+      - name: force push to gh-pages branch
+        uses: actions/deploy-github-pages@v1
+        with:
+          github-repository: ${GITHUB_REPOSITORY}
+          github-token: ${GITHUB_TOKEN}
+          github-pages-branch: gh-pages
+          github-pages-directory: docs/.vuepress/dist
+          github-pages-commit-message: "Deployed by action"
+          github-pages-commit-name: ${GITHUB_ACTOR}
+          github-pages-commit-email: "info@apigear.io"
