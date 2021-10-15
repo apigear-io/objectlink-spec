@@ -17,13 +17,8 @@ jobs:
       - run: yarn
       - run: yarn docs:build
 
-      - name: force push to gh-pages branch
-        uses: actions/deploy-github-pages@v1
+      - name: deploy to github pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github-repository: ${GITHUB_REPOSITORY}
-          github-token: ${GITHUB_TOKEN}
-          github-pages-branch: gh-pages
-          github-pages-directory: docs/.vuepress/dist
-          github-pages-commit-message: "Deployed by action"
-          github-pages-commit-name: ${GITHUB_ACTOR}
-          github-pages-commit-email: "info@apigear.io"
+          github_token: ${GITHUB_TOKEN}
+          publish_dir: docs/.vuepress/dist
