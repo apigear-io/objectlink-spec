@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Server Side Signals | ObjectLink Protocol</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ObjectLink Core Docs">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3c76eccd.css" as="style"><link rel="preload" href="/assets/js/app.f15fa6d4.js" as="script"><link rel="preload" href="/assets/js/2.a24b8512.js" as="script"><link rel="preload" href="/assets/js/18.92475c35.js" as="script"><link rel="prefetch" href="/assets/js/10.bb92f4ad.js"><link rel="prefetch" href="/assets/js/11.2659a005.js"><link rel="prefetch" href="/assets/js/12.ee6cbbb7.js"><link rel="prefetch" href="/assets/js/13.d684104e.js"><link rel="prefetch" href="/assets/js/14.b8159a6f.js"><link rel="prefetch" href="/assets/js/15.3febf42a.js"><link rel="prefetch" href="/assets/js/16.af9e59ae.js"><link rel="prefetch" href="/assets/js/17.73cf1bbe.js"><link rel="prefetch" href="/assets/js/19.153d13b4.js"><link rel="prefetch" href="/assets/js/3.6c532194.js"><link rel="prefetch" href="/assets/js/4.65d7edab.js"><link rel="prefetch" href="/assets/js/5.8015a466.js"><link rel="prefetch" href="/assets/js/6.de553fbb.js"><link rel="prefetch" href="/assets/js/7.b26ef13e.js"><link rel="prefetch" href="/assets/js/8.a63be6cd.js"><link rel="prefetch" href="/assets/js/9.b1b356bf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3c76eccd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">ObjectLink Protocol</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/protocol/" class="nav-link router-link-active">
+  Protocol
+</a></div><div class="nav-item"><a href="https://apigear.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ApiGear
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/protocol/" class="nav-link router-link-active">
+  Protocol
+</a></div><div class="nav-item"><a href="https://apigear.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ApiGear
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Protocol</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/protocol/" aria-current="page" class="sidebar-link">Protocol</a></li><li><a href="/protocol/lifecycle.html" class="sidebar-link">Lifecycle</a></li><li><a href="/protocol/properties.html" class="sidebar-link">Property Synchronization</a></li><li><a href="/protocol/methods.html" class="sidebar-link">Method Invokation</a></li><li><a href="/protocol/signals.html" aria-current="page" class="active sidebar-link">Server Side Signals</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/protocol/signals.html#apigear-object-model" class="sidebar-link">ApiGear Object Model</a></li><li class="sidebar-sub-header"><a href="/protocol/signals.html#protocol-flow" class="sidebar-link">Protocol Flow</a></li><li class="sidebar-sub-header"><a href="/protocol/signals.html#sequence-diagram" class="sidebar-link">Sequence Diagram</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="server-side-signals"><a href="#server-side-signals" class="header-anchor">#</a> Server Side Signals</h1> <p>Signals re used to  notify the local object about changes on the remote object.</p> <h2 id="apigear-object-model"><a href="#apigear-object-model" class="header-anchor">#</a> ApiGear Object Model</h2> <p>Signals can be modeled using ApiGear as signals of an interface.</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> org.demos
+
+<span class="token key atrule">interfaces</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Echo
+    <span class="token key atrule">signals</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> shutdown
+        <span class="token key atrule">params</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> timeout
+          <span class="token key atrule">type</span><span class="token punctuation">:</span> int
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// org.demos.js</span>
+<span class="token keyword">class</span> <span class="token class-name">Echo</span> <span class="token punctuation">{</span>
+  <span class="token function">onShutdown</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span>	
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> echo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Echo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+echo<span class="token punctuation">.</span><span class="token function">onShutdown</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token parameter">timeout</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout: '</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// org.demos.js</span>
+<span class="token keyword">class</span> <span class="token class-name">Echo</span> <span class="token punctuation">{</span>
+  <span class="token function">onShutdown</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span>	
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> echo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Echo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+echo<span class="token punctuation">.</span><span class="token function">onShutdown</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token parameter">timeout</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout: '</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>The resulting code will look somehow like this and most often will require a lambda function to be used for the notification.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// org.demos.js</span>
+<span class="token keyword">class</span> <span class="token class-name">Echo</span> <span class="token punctuation">{</span>
+  <span class="token function">onShutdown</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span>	
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> echo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Echo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+echo<span class="token punctuation">.</span><span class="token function">onShutdown</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token parameter">timeout</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'timeout: '</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="protocol-flow"><a href="#protocol-flow" class="header-anchor">#</a> Protocol Flow</h2> <p>To receive signals the local object needs to be linked to the remote object first.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">--</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span> <span class="token constant">LINK</span><span class="token punctuation">,</span> <span class="token string">&quot;org.demos.Echo&quot;</span><span class="token punctuation">]</span>
+</code></pre></div><p>Then the remote object can send at any time signals to the linked client objects and notify them on changes.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span><span class="token operator">--</span> <span class="token punctuation">[</span> <span class="token constant">SIGNAL</span><span class="token punctuation">,</span> <span class="token string">&quot;org.demos.Echo/shutdown&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+</code></pre></div><p>To stop receiving signals, just unlink the remote object.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">--</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span> <span class="token constant">UNLINK</span><span class="token punctuation">,</span> <span class="token string">&quot;org.demos.Echo&quot;</span><span class="token punctuation">]</span>
+</code></pre></div><h2 id="sequence-diagram"><a href="#sequence-diagram" class="header-anchor">#</a> Sequence Diagram</h2> <p>After an object is linked server side signals will be send.</p> <div class="spinner" style="background:rgb(66, 185, 131);" data-v-1bbcb91a></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/protocol/methods.html" class="prev">
+        Method Invokation
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f15fa6d4.js" defer></script><script src="/assets/js/2.a24b8512.js" defer></script><script src="/assets/js/18.92475c35.js" defer></script>
+  </body>
+</html>

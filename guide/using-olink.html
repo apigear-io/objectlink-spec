@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using ObjectLink | ObjectLink Protocol</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ObjectLink Core Docs">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3c76eccd.css" as="style"><link rel="preload" href="/assets/js/app.f15fa6d4.js" as="script"><link rel="preload" href="/assets/js/2.a24b8512.js" as="script"><link rel="preload" href="/assets/js/12.ee6cbbb7.js" as="script"><link rel="prefetch" href="/assets/js/10.bb92f4ad.js"><link rel="prefetch" href="/assets/js/11.2659a005.js"><link rel="prefetch" href="/assets/js/13.d684104e.js"><link rel="prefetch" href="/assets/js/14.b8159a6f.js"><link rel="prefetch" href="/assets/js/15.3febf42a.js"><link rel="prefetch" href="/assets/js/16.af9e59ae.js"><link rel="prefetch" href="/assets/js/17.73cf1bbe.js"><link rel="prefetch" href="/assets/js/18.92475c35.js"><link rel="prefetch" href="/assets/js/19.153d13b4.js"><link rel="prefetch" href="/assets/js/3.6c532194.js"><link rel="prefetch" href="/assets/js/4.65d7edab.js"><link rel="prefetch" href="/assets/js/5.8015a466.js"><link rel="prefetch" href="/assets/js/6.de553fbb.js"><link rel="prefetch" href="/assets/js/7.b26ef13e.js"><link rel="prefetch" href="/assets/js/8.a63be6cd.js"><link rel="prefetch" href="/assets/js/9.b1b356bf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3c76eccd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">ObjectLink Protocol</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/protocol/" class="nav-link">
+  Protocol
+</a></div><div class="nav-item"><a href="https://apigear.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ApiGear
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/protocol/" class="nav-link">
+  Protocol
+</a></div><div class="nav-item"><a href="https://apigear.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ApiGear
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/guide/using-olink.html" aria-current="page" class="active sidebar-link">Using ObjectLink</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/using-olink.html#example-client-side" class="sidebar-link">Example Client Side</a></li><li class="sidebar-sub-header"><a href="/guide/using-olink.html#example-server-side" class="sidebar-link">Example Server Side</a></li><li class="sidebar-sub-header"><a href="/guide/using-olink.html#apigear-object-model" class="sidebar-link">ApiGear Object Model</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="using-objectlink"><a href="#using-objectlink" class="header-anchor">#</a> Using ObjectLink</h1> <p>This shows the usage of the different object link impementations using conceptual code snippets. For the exact usage, please consult the documentation of different implementation repositories.</p> <p>An object link implementation comes with a <code>ClientNode</code> and a <code>RemoteNode</code> class. A client node manages the client objects, called sinks and the remote node the server objects called sources.</p> <p>Internally these nodes use a global registry where all sinks (or sources) will be registered with their object name. This means the same object name can not be registered twice in the same program.</p> <h2 id="example-client-side"><a href="#example-client-side" class="header-anchor">#</a> Example Client Side</h2> <p>The client side consist of object sinks which define the interface to the remote objects and client nodes for each connection to the remote object server.</p> <h3 id="object-sink"><a href="#object-sink" class="header-anchor">#</a> Object Sink</h3> <p>The object sink is the client side interface for the object and act as the counter part of the remote side object source.</p> <p><em>Note: In the future there will be generic base classes to minimize the client code.</em></p> <p>Here is a typescript example.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token keyword">implements</span> <span class="token class-name">IObjectSink</span> <span class="token punctuation">{</span>
+  <span class="token comment">// our properties</span>
+  _count<span class="token operator">:</span> <span class="token number">0</span>
+  node<span class="token operator">:</span> ClientNode <span class="token operator">|</span> <span class="token keyword">null</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// register this sink</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>node <span class="token operator">=</span> ClientNode<span class="token punctuation">.</span><span class="token function">addObjectSink</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">get</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_count
+  <span class="token punctuation">}</span>
+  <span class="token keyword">set</span> <span class="token function">count</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_count <span class="token operator">!==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// guard the changes</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>node<span class="token operator">?.</span><span class="token function">setRemoteProperty</span><span class="token punctuation">(</span><span class="token string">'demo.Counter/count'</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// remote method invokation, without args or callback</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>node<span class="token operator">?.</span><span class="token function">invokeRemote</span><span class="token punctuation">(</span><span class="token string">'demo.Counter/increment'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">olinkObjectName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'demo.Counter'</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkOnSignal</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token comment">// handle server side signals</span>
+    <span class="token keyword">const</span> path <span class="token operator">=</span> Name<span class="token punctuation">.</span><span class="token function">pathFromName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Counter.onSignal'</span><span class="token punctuation">,</span> path<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkOnPropertyChanged</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token comment">// handle server side property changes</span>
+    <span class="token keyword">const</span> path <span class="token operator">=</span> Name<span class="token punctuation">.</span><span class="token function">pathFromName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">[</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> value
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkOnInit</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> props<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token comment">// receive initial properties</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> props<span class="token punctuation">[</span><span class="token string">'count'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkOnRelease</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token comment">// release sink</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="websocket-client-using-the-client-node"><a href="#websocket-client-using-the-client-node" class="header-anchor">#</a> Websocket client using the Client Node</h3> <p>For the client we need a websocket connection to a server to send object link messages. The client needs to send incoming message to the remote node and listen to write request from the client node. There will be one node per websocket connection.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> WebSocket <span class="token keyword">from</span> <span class="token string">'ws'</span>
+<span class="token keyword">import</span> ClientNode <span class="token keyword">from</span> <span class="token string">'olink'</span>
+
+ready <span class="token operator">=</span> <span class="token boolean">false</span>
+queue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">function</span> <span class="token function">processMessages</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>ready<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">// empty queue</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">const</span> msg <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> node <span class="token operator">=</span> <span class="token function">ClientNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+node<span class="token punctuation">.</span><span class="token function">onWrite</span><span class="token punctuation">(</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token comment">// node might send message</span>
+	<span class="token comment">// while we are not connected yet</span>
+	queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+	<span class="token function">processMessages</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// create websocket</span>
+<span class="token keyword">const</span> ws <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span>address<span class="token punctuation">)</span>
+ws<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>ws<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	ready <span class="token operator">=</span> <span class="token boolean">true</span>
+	<span class="token comment">//</span>
+	<span class="token function">processMessages</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+ws<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token comment">// let our node handle all messages</span>
+	node<span class="token punctuation">.</span><span class="token function">handleMessage</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="example-server-side"><a href="#example-server-side" class="header-anchor">#</a> Example Server Side</h2> <p>The remote server contains the object sources for the object communication using the websocket protocol.</p> <h3 id="websocket-server-using-remote-node"><a href="#websocket-server-using-remote-node" class="header-anchor">#</a> WebSocket Server using Remote Node</h3> <p>For the server we need a websocket server which sends messages to a remote node and listens to write requests from the remote node.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> WebSocket <span class="token keyword">from</span> <span class="token string">'ws'</span>
+
+<span class="token keyword">const</span> wss <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">.</span><span class="token function">Server</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+wss<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'connection'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>ws<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> remote <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RemoteNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	remote<span class="token punctuation">.</span><span class="token function">onWrite</span><span class="token punctuation">(</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+		ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	ws<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>  <span class="token punctuation">{</span>
+		remote<span class="token punctuation">.</span><span class="token function">handleMessage</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>To register objects to the remote node, we need to create an object adapter and register it.</p> <h3 id="implementation-object"><a href="#implementation-object" class="header-anchor">#</a> Implementation Object</h3> <p>First we create our implementation object, which will carry our business logic.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token punctuation">{</span>
+  count<span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+    RemoteNode<span class="token punctuation">.</span><span class="token function">propertyChange</span><span class="token punctuation">(</span><span class="token string">'demo.Counter/count'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">signalShutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    RemoteNode<span class="token punctuation">.</span><span class="token function">signal</span><span class="token punctuation">(</span><span class="token string">'demo.Counter/shutdown'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="object-source-the-adapters"><a href="#object-source-the-adapters" class="header-anchor">#</a> Object Source the Adapters</h3> <p>An adapter will then use the implementation and communicate with client using the remote node.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">CounterAdapter</span> <span class="token keyword">implements</span> <span class="token class-name">IObjectSource</span> <span class="token punctuation">{</span>
+  impl<span class="token operator">:</span> Couter
+  <span class="token function">constructor</span><span class="token punctuation">(</span>impl<span class="token operator">:</span> Counter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>impl <span class="token operator">=</span> impl
+    RemoteNode<span class="token punctuation">.</span><span class="token function">addObjectSource</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkObjectName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'demo.Counter'</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkInvoke</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> args<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> path <span class="token operator">=</span> Name<span class="token punctuation">.</span><span class="token function">pathFromName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token string">'increment'</span><span class="token operator">:</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>impl<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkSetProperty</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> path <span class="token operator">=</span> Name<span class="token punctuation">.</span><span class="token function">pathFromName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>impl<span class="token punctuation">[</span>path<span class="token punctuation">]</span> <span class="token operator">!==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>impl<span class="token punctuation">[</span>path<span class="token punctuation">]</span> <span class="token operator">=</span> value
+      RemoteNode<span class="token punctuation">.</span><span class="token function">propertyChange</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">demo.Counter/{path}</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkCollectProperties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      count<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>impl<span class="token punctuation">.</span>count<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">olinkLinked</span><span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> node<span class="token operator">:</span> RemoteNode<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+    <span class="token comment">// object was linked</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="apigear-object-model"><a href="#apigear-object-model" class="header-anchor">#</a> ApiGear Object Model</h2> <p>Using ApiGears object model and the associated template, all code on client ans remote side including a websocket server will be generated for you including a simulation model for the data format and documentation.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/" class="prev router-link-active">
+        Introduction
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f15fa6d4.js" defer></script><script src="/assets/js/2.a24b8512.js" defer></script><script src="/assets/js/12.ee6cbbb7.js" defer></script>
+  </body>
+</html>
