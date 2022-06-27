@@ -38,7 +38,7 @@ class Counter implements IObjectSink {
   }
 
   increment() {
-    // remote method invokation, without args or callback
+    // remote method invocation, without args or callback
     this.node?.invokeRemote('demo.Counter/increment')
   }
 
