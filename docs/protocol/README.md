@@ -32,7 +32,7 @@ The client and server needs to know their transport and encoding in advance. The
 	* `<-- PROPERTY_CHANGE` - sends property changes to all linked client objects
 * [Methods](methods)
 	* `--> INVOKE` - invoke a method on a remote object
-	* `<-- INVOKE_REPLY` - reply of an remote invokation
+	* `<-- INVOKE_REPLY` - reply of an remote invocation
 * [Signals](signals)
 	* `<-- SIGNAL` - send remote events back to all linked client objects
 
