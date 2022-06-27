@@ -1,6 +1,6 @@
-# Method Invokation
+# Method Invocation
 
-A remote invokation invokes asynchronously a method on a remote object and returns the result.
+A remote invocation invokes asynchronously a method on a remote object and returns the result.
 
 ## ApiGear Object Model
 
