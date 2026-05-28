@@ -40,3 +40,7 @@ The protocol itself is isolated from any transport technology to make it easier 
 * [ObjectLink Core C++14](https://github.com/apigear-io/objectlink-core-cpp)
 
 
+
+## License
+
+Licensed under the [MIT License](./LICENSE). See [LICENSE](./LICENSE) for details.
